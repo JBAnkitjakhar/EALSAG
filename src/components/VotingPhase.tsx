@@ -110,7 +110,7 @@ const VotingPhase = () => {
       );
       
       if (keyIndex === -1) {
-        throw new Error('Invalid voting key: This key was not registered during the registration phase');
+        throw new Error('Invalid voting key: This key was not registered during the submission phase');
       }
       
       // Get the submission and check if it's used
@@ -198,7 +198,7 @@ const VotingPhase = () => {
         } else if (err.message.includes('already been used')) {
           setError('This voting key has already been used. Each key can only be used once to cast a vote.');
         } else if (err.message.includes('Invalid voting key')) {
-          setError('Invalid voting key: The provided key was not registered during the registration phase.');
+          setError('Invalid voting key: The provided key was not registered during the submission phase.');
         } else {
           setError(`Error: ${err.message}`);
         }
@@ -309,7 +309,7 @@ const VotingPhase = () => {
           <Textarea
             value={privateKey}
             onChange={(e) => setPrivateKey(e.target.value)}
-            placeholder="Input your voting private key that was generated during the registration phase. You can paste the entire JSON object or just the private key value."
+            placeholder="Input your voting private key that was generated during the submission phase. You can paste the entire JSON object or just the private key value."
             disabled={loading || isDisabled}
             className="min-h-32 font-mono text-sm bg-gray-700 border-gray-600 text-gray-200 placeholder:text-gray-400"
             style={{ wordBreak: 'break-all' }}

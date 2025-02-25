@@ -197,7 +197,7 @@ export async function sendVerificationCode(
                             margin-top: 1rem;
                             font-size: 0.75rem;
                         ">
-                            © 2024 IIT-Bhilai E-Voting System<br>
+                            © 2025 IIT-Bhilai E-Voting System<br>
                             This is an automated message, please do not reply to this email.
                         </div>
                     </div>
@@ -376,7 +376,7 @@ export async function sendKeys(email: string, keys: KeyData): Promise<boolean> {
                             margin-top: 1rem;
                             font-size: 0.75rem;
                         ">
-                            © 2024 IIT-Bhilai E-Voting System<br>
+                            © 2025 IIT-Bhilai E-Voting System<br>
                             This is an automated message, please do not reply to this email.
                         </div>
                     </div>
