@@ -1,4 +1,4 @@
-// src/config/election.ts
+// src/config/election.ts file
 
 // Define the allowed domain types
 export type AllowedDomain = '@nitkkr.ac.in' | '@iitbhilai.ac.in' | '@gmail.com' ;
