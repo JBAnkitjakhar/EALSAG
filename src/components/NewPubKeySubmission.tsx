@@ -386,7 +386,7 @@ const NewPubKeySubmission = () => {
         URL.revokeObjectURL(url); // Clean up by revoking the object URL
       } catch (downloadError) {
         console.error("Download error:", downloadError);
-        setSuccess("Voting keys generated and submitted successfully! WARNING: Failed to download key file. Please copy and save your keys manually:");
+        setSuccess("Voting key pair generated and new public key submitted successfully! WARNING: Failed to download key file. Please copy and save your keys manually:");
         setSuccess(prev => `${prev}\n\nPublic Key: ${newVotingPubKey}\nPrivate Key: ${votingKeyPair.privateKey}`);
         setLoading(false);
         return;
@@ -394,7 +394,7 @@ const NewPubKeySubmission = () => {
 
       console.log("Key pair download triggered");
       setSuccess(
-        "Voting keys generated and submitted successfully! Please save your downloaded keys in a secure location."
+        "Voting key pair generated and new public key submitted successfully! Please save your downloaded keys in a secure location."
       );
     } catch (error) {
       console.error("Error in handleSubmit:", error);
