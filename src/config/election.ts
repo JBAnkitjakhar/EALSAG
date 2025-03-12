@@ -8,7 +8,7 @@ export const ELECTION_CONFIG = {
   candidates: ["Btech 1st Year", "Btech 2nd Year", "Btech 3rd Year", "Btech 4th Year"],
   timing: {
     registrationDuration: 10*60, // seconds 
-    submissionDuration: 15*60, // seconds  
+    submissionDuration: 10*60, // seconds  
     votingDuration: 10*60, // seconds  
     verificationCodeExpiry: 600, // 10 minutes in seconds
   },
