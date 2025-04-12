@@ -30,7 +30,7 @@ const getVerificationSubject = (
   type: VerificationType,
   email: string
 ): string => {
-  const baseSubject = "IIT-Bhilai E-Voting Project - ";
+  const baseSubject = "IIT-Bhilai E-Voting / - ";
 
   switch (type) {
     case "login":
@@ -38,9 +38,9 @@ const getVerificationSubject = (
         ? `${baseSubject}Admin Login Verification`
         : `${baseSubject}Login Verification`;
     case "generation":
-      return `${baseSubject}Key Generation Verification`;
+      return `${baseSubject}Voter Registration`;
     case "deploy":
-      return `${baseSubject}Admin Contract Redeploy Verification`;
+      return `${baseSubject}Election Authority Registration`;
     default:
       return `${baseSubject}Verification`;
   }

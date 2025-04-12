@@ -315,7 +315,7 @@ const AdminClass: FC<AdminClassProps> = ({ onDeployStart }) => {
               <div>
                 <Input
                   type="number"
-                  placeholder="Registration Duration (seconds)"
+                  placeholder="Voter Registration Deadline (seconds)"
                   onChange={(e) => setDeploymentConfig(prev => ({
                     ...prev,
                     registrationDuration: e.target.value
@@ -331,7 +331,7 @@ const AdminClass: FC<AdminClassProps> = ({ onDeployStart }) => {
               <div>
                 <Input
                   type="number"
-                  placeholder="Submission Duration (seconds)"
+                  placeholder="Voting Public Key Submission (seconds)"
                   onChange={(e) => setDeploymentConfig(prev => ({
                     ...prev,
                     submissionDuration: e.target.value
