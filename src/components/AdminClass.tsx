@@ -238,11 +238,11 @@ const AdminClass: FC<AdminClassProps> = ({ onDeployStart }) => {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <Button variant="outline" className="mr-4">Admin Class</Button>
+        <Button variant="outline" className="mr-4">Election Authority</Button>
       </DialogTrigger>
       <DialogContent className="fixed w-[calc(100%-2rem)] max-w-md bg-gray-800 border-gray-700 text-white z-50 left-[50%]" style={dialogStyle}>
         <DialogHeader>
-          <DialogTitle>Admin Class</DialogTitle>
+          <DialogTitle>Election Authority</DialogTitle>
         </DialogHeader>
         
         {error && (
