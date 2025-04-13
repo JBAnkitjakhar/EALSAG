@@ -30,7 +30,7 @@ const getVerificationSubject = (
   type: VerificationType,
   email: string
 ): string => {
-  const baseSubject = "IIT-Bhilai E-Voting / - ";
+  const baseSubject = "IIT-Bhilai E-Voting  - ";
 
   switch (type) {
     case "login":
