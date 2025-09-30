@@ -4,28 +4,27 @@ import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 
 export function AnimatedTestimonialsDemo() {
   const testimonials = [
-     
     {
       quote:
-        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+        "Pioneering secure digital democracy through cutting-edge blockchain research and innovation in collaboration with leading academic institutions.",
       name: "IIT Bhilai",
-      designation: "Indian Institute of technology, Bhilai : Chhattisgarh",
+      designation: "Indian Institute of Technology, Bhilai : Chhattisgarh",
       src: "/iitbhilai.png",
     },
     {
       quote:
-        "write here ...........  wait!",
-      name: "Dr. Souryadyuti Paul ",
-      designation: "Associate Professor, Head of CSE Department, IIT Bhilai",
-      src: "/drpaul.png",
+        "Driving technological advancement and fostering innovation ecosystems through transformative research projects in blockchain, AI, and emerging technologies.",
+      name: "IBITF",
+      designation: "IIT Bhilai Innovation and Technology Foundation",
+      src: "/ibitf.png",
     },
     {
-        quote:
-          "write here   ....   wait !",
-        name: "Evoting System",
-        designation: "Using Blockchain technology",
-        src: "/blockchain.jpg",
-      },
+      quote:
+        "A revolutionary voting system leveraging LSAG ring signatures for complete voter anonymity, zero-knowledge proofs for privacy-preserving verification, and immutable smart contracts ensuring transparent, tamper-proof elections on the blockchain.",
+      name: "E-Voting System",
+      designation: "Using Blockchain Technology & Cryptographic Protocols",
+      src: "/blockchain.jpg",
+    },
     // {
     //   quote:
     //     "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
@@ -33,7 +32,6 @@ export function AnimatedTestimonialsDemo() {
     //   designation: "Junior Developers , IIT bhilai",
     //   src: "/jb.png",
     // },
-  
   ];
-  return <AnimatedTestimonials testimonials={testimonials} autoplay={true}/>;
+  return <AnimatedTestimonials testimonials={testimonials} autoplay={true} />;
 }

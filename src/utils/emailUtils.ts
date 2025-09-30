@@ -181,15 +181,6 @@ export async function sendVerificationCode(
                         text-align: center;
                         color: #64748b;
                     ">
-                        <p style="
-                            font-size: 0.875rem;
-                            margin-bottom: 1rem;
-                        ">
-                            For more info, please contact Dr. Souradyuti Paul, Head of CSE Department and Project Administrator.<br>
-                            <div>
-                            <div style="color: #1e40af;">Emails: souradyuti@iitbhilai.ac.in</div>
-                            </div>
-                        </p>
 
                         <div style="
                             border-top: 1px solid #e2e8f0;
@@ -362,13 +353,6 @@ export async function sendKeys(email: string, keys: KeyData): Promise<boolean> {
                         text-align: center;
                         color: #64748b;
                     ">
-                        <p style="
-                            font-size: 0.875rem;
-                            margin-bottom: 1rem;
-                        ">
-                            For more info, please contact Dr. Souradyuti Paul, Head of CSE Department and Project Administrator.<br>
-                            <span style="color: #1e40af;">Email: souradyuti@iitbhilai.ac.in</span>
-                        </p>
 
                         <div style="
                             border-top: 1px solid #e2e8f0;
