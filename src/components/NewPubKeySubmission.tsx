@@ -95,15 +95,15 @@ const NewPubKeySubmission = () => {
     formattedKeyImage: string,
     VotingAddress:string,
   ): Promise<boolean> => {
-    console.log("Starting blockchain submission with:", {
-      votingPublicKey,
-      ringSignature: ringSignature.substring(0, 32) + "...",  
-      formattedKeyImage,
-      VotingAddress
-    });
+    // console.log("Starting blockchain submission with:", {
+    //   votingPublicKey,
+    //   ringSignature: ringSignature.substring(0, 32) + "...",  
+    //   formattedKeyImage,
+    //   VotingAddress
+    // });
 
     try {
-      console.log("Sending POST request to /api/blockchain");
+      // console.log("Sending POST request to /api/blockchain");
       const response = await fetch("/api/blockchain", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -175,7 +175,7 @@ const NewPubKeySubmission = () => {
 
     try {
       // 1. Generate new voting key pair
-      console.log("Step 1: Generating new voting key pair");
+      // console.log("Step 1: Generating new voting key pair");
       let votingKeyPair;
       try {
         votingKeyPair = await generateKeys();
@@ -186,10 +186,10 @@ const NewPubKeySubmission = () => {
       const newVotingPubKey = votingKeyPair.publicKey;
       const VotingAddress = votingKeyPair.address;
 
-      console.log("Generated voting public key:", newVotingPubKey);
+      // console.log("Generated voting public key:", newVotingPubKey);
 
       // 2. Get all verified public keys from contract
-      console.log("Step 2: Fetching public keys from contract");
+      // console.log("Step 2: Fetching public keys from contract");
       let contract;
       let allPublicKeys;
       try {
@@ -293,7 +293,7 @@ const NewPubKeySubmission = () => {
       }
 
       // 4. Verify ring signature
-      console.log("Step 4: Verifying ring signature");
+      // console.log("Step 4: Verifying ring signature");
       const verifyPayload = {
         publicKeys: allPublicKeys,
         signature: signature,
@@ -304,7 +304,7 @@ const NewPubKeySubmission = () => {
 
       let verifyResponse;
       try {
-        console.log("Sending verification request to /api/response/verify-signatures");
+        // console.log("Sending verification request to /api/response/verify-signatures");
         verifyResponse = await fetch("/api/response/verify-signatures", {
           method: "POST",
           headers: {
@@ -317,7 +317,7 @@ const NewPubKeySubmission = () => {
         throw new Error("Network error while verifying signature. Please check your internet connection and try again.");
       }
 
-      console.log("Verify signatures response status:", verifyResponse.status);
+      // console.log("Verify signatures response status:", verifyResponse.status);
       if (!verifyResponse.ok) {
         const errorData = await verifyResponse.json().catch(() => ({}));
         throw new Error(`Failed to verify signature: ${errorData.error || `Server responded with status ${verifyResponse.status}`}`);
